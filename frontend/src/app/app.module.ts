@@ -26,17 +26,8 @@ import { CaseCategoryComponent } from './case-category/case-category.component';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'about',
     pathMatch: 'full'
-  },
-  {
-    path: 'home',
-    component: HomeComponent
-  },
-  
-  {
-    path: 'annotate-case/:name',
-    component: AnnotateCaseComponent
   },
   {
     path: 'about',
@@ -53,6 +44,14 @@ const routes: Routes = [
   {
     path: 'case-category',
     component: CaseCategoryComponent
+  },
+  {
+    path: 'annotate',
+    component: HomeComponent
+  },
+    {
+    path: 'annotate-case/:name',
+    component: AnnotateCaseComponent
   }
 ];
 

@@ -32,7 +32,7 @@
  font-size:15px!important;
   font-weight:700!important;
  line-height: 50px;
- padding-left:15px; 
+ padding-left:25px; 
  height:50px;
 }
 .items-list{
@@ -40,8 +40,11 @@
  color: #EEEEEE!important;
  font-weight:400!important;
  font-size:13px!important;
-  margin-left:65x; 
+ margin-left:65x; 
+ padding-top: 0px;
+  margin-top: 0px;
 
+ 
 }
 .example-events {
   width: 500px;
