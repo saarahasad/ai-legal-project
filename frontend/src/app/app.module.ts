@@ -12,7 +12,7 @@ import { AppComponent } from './app.component';
 import {RouterModule, Routes} from '@angular/router';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatCheckboxModule,MatRadioModule,MatInputModule, MatTabsModule,MatSnackBarModule, MatDialogModule,MatProgressSpinnerModule, MatSelectModule,MatButtonModule, MatCardModule, MatMenuModule, MatToolbarModule, MatIconModule, MatSidenavModule, MatListModule } from '@angular/material';
+import {MatGridListModule,MatExpansionModule,MatCheckboxModule,MatRadioModule,MatInputModule, MatTabsModule,MatSnackBarModule, MatDialogModule,MatProgressSpinnerModule, MatSelectModule,MatButtonModule, MatCardModule, MatMenuModule, MatToolbarModule, MatIconModule, MatSidenavModule, MatListModule } from '@angular/material';
 
 import { AnnotateCaseComponent } from './annotate-case/annotate-case.component';
 import { HomeComponent } from './home/home.component';
@@ -75,10 +75,12 @@ const routes: Routes = [
     MatDialogModule,
     MatInputModule,
      MatSelectModule,
+     MatGridListModule,
      MatTabsModule,
      MatSnackBarModule,
     HttpClientModule,
     MatButtonModule,
+    MatExpansionModule,
     MatMenuModule,
     MatCardModule,
     MatCheckboxModule,

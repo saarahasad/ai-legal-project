@@ -13,3 +13,8 @@ export interface Sentences {
     id:number;
 
 }
+export interface Category {
+    id?:Number;
+    sentences?:string[];
+    name?:string;
+}

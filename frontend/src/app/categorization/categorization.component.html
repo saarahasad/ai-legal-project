@@ -1,3 +1,42 @@
-<p>
-  categorization works!
-</p>
+<div class="row">
+  <div class="gradient-container" class="col-md-6">
+    <mat-card style="margin-left:20px; border-radius: 25px 25px 0px 0px; padding: 0px;">
+      <mat-card-header style=" border-radius: 25px 25px 0px 0px;background: #78244c; color:white;">
+        <mat-card-title style="display:block;text-align:center; padding-top:15px;">Orginal</mat-card-title>
+      </mat-card-header>
+      <div style="list-style-type: none;font-size:13px;margin-top:10px;" class="gradient-container">
+        <p style=" text-align:justify;padding-right:10px;padding-left:10px;" *ngFor="let sent of sentences">
+          {{sent.data}}
+        </p>
+      </div>
+      <br>
+    </mat-card>
+  </div>
+  <div class="col-md-6">
+    <mat-card style=" border-radius: 25px 25px 0px 0px; padding: 0px;">
+      <mat-card-header style=" border-radius: 25px 25px 0px 0px;background: #15db95; color:white;">
+        <mat-card-title style="display:block;text-align:center; padding-top:15px;">Categorised</mat-card-title>
+      </mat-card-header>
+      <mat-accordion *ngFor="let category of categories">
+        <mat-expansion-panel [expanded]="true">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <strong> {{category.name}}</strong>
+            </mat-panel-title>
+            <mat-panel-description>
+              Size: {{category.sentences?.length}} sentences
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <ul>
+          <li style="text-align:justify;padding:10px; font-size:14px;" *ngFor="let sentence of category.sentences">
+        {{sentence}}
+          </li>
+          </ul>
+        </mat-expansion-panel>
+        <div style="height:8px"></div>
+      </mat-accordion>
+    </mat-card>
+    <br>
+
+  </div>
+</div>

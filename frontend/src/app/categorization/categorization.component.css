@@ -1,0 +1,22 @@
+.example-headers-align .mat-expansion-panel-header-title,
+.example-headers-align .mat-expansion-panel-header-description {
+  flex-basis: 0;
+}
+
+.example-headers-align .mat-expansion-panel-header-description {
+  justify-content: space-between;
+  align-items: center;
+}
+
+mat-form-field {
+  margin-right: 12px;
+}
+.gradient-container{
+       /* background: linear-gradient(-18deg, rgba(164,78,141,0.7) 0%, rgba(60,0,122,0.7) 100%);*/
+      
+}
+li {
+    margin-top:4px;
+  list-style-image: url(http://www.webcreatorbox.com/sample/images/arrow.png);
+
+}

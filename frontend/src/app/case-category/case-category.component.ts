@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FsService } from "../services/fs.service";
 
 @Component({
   selector: 'app-case-category',
