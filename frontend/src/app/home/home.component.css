@@ -1,0 +1,115 @@
+
+#body{
+    color: black;
+     font-family: Helvetica, Arial, sans-serif;
+     height: 1500px;
+    position: relative;
+    padding:0px!important;
+    margin:0px!important;
+
+}
+
+
+nav > .nav.nav-tabs{
+
+  border: none;
+    background:#F7F9FB;
+    border-radius:0;
+
+}
+nav > div a.nav-item.nav-link,
+nav > div a.nav-item.nav-link.active
+{
+  border: none;
+    padding: 18px 25px;
+    color:#fff;
+    background:#272e38;
+    border-radius:0;
+}
+
+nav > div a.nav-item.nav-link.active:after
+ {
+  content: "";
+  position: relative;
+  bottom: -60px;
+  left: -10%;
+  border: 15px solid transparent;
+  border-top-color: #e74c3c ;
+}
+.tab-content{
+  background: #fdfdfd;
+    line-height: 25px;
+    border: 1px solid #ddd;
+    border-top:5px solid #e74c3c;
+    border-bottom:5px solid #e74c3c;
+    padding:30px 25px;
+}
+
+nav > div a.nav-item.nav-link:hover,
+nav > div a.nav-item.nav-link:focus
+{
+  border: none;
+    background: #e74c3c;
+    color:#fff;
+    border-radius:0;
+    transition:background 0.20s linear;
+}
+#jumb1{
+text-align: center
+}
+
+/* to change arrow when focused */
+.mat-select:focus:not(.mat-select-disabled).mat-primary .mat-select-arrow {
+    color: #63961C;
+}
+
+/* to change underline when focused */
+.mat-select:focus:not(.mat-select-disabled).mat-primary .mat-select-underline {
+    background-color: #63961C;
+}
+
+/* to change plceholder text when focused */
+.mat-select:focus:not(.mat-select-disabled).mat-primary .mat-select-trigger {
+    color: black;
+}
+
+/* to change selected item color in the select list */
+.mat-primary .mat-option.mat-selected:not(.mat-option-disabled) {
+    color: black;
+}
+button:focus {
+     outline: None!important;
+     outline: 0px auto -webkit-focus-ring-color!important;
+   
+} 
+
+/* Styles for tab labels */
+.mat-tab-label {
+   color:#31708e!important;
+       justify-content: center; /* align items in Main Axis */
+
+    
+}
+
+/* Styles for the active tab label */
+.mat-tab-label.mat-tab-label-active {
+   color:#31708e!important;
+}
+
+
+.example-card{
+    margin: 0 auto;
+    width: 50%;
+}
+@media(max-width:600px){
+.mat-tab-label-container{
+    font-size: 10px;
+}
+.example-card{
+    margin: 0 auto;
+    width: 100%;
+}
+}
+.mat-tab-labels {
+    justify-content: center!important;
+}

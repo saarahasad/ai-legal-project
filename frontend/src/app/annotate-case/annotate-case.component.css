@@ -1,0 +1,200 @@
+#body{
+    color: black;
+    font-family: Helvetica, Arial, sans-serif;
+     font-size: 14px;
+         margin: 10px;
+}
+@media (min-width: 992px){
+.container {
+    max-width: 100%!important;
+    margin-right: 0px!important;
+        margin-left: 0px;
+}}
+@media(max-width:600px){
+  #left-card{
+    font-size: 10px!important;
+  }
+  #ul-content{
+    padding-left: 0px!important;
+  }
+}
+h6{
+    margin-top: 10px;
+}
+
+.mat-spinner-color::ng-deep circle{
+stroke: #31708e !important;
+text-align: center;
+display: block;
+margin-left: 50px;
+
+}
+
+.zero{
+  background-color: #ffb74d !important;
+}
+.one{
+  background-color: #90caf9!important;
+}
+
+.two{
+  background-color: #c5e1a5!important;
+}
+
+.three{
+  background-color: #ffd54f!important;
+}
+
+.four{
+  background-color:  #f8bbd0!important;
+}
+
+.five{
+  background-color: #C5CAE9!important;
+}
+.six{
+  background-color: #80cbc4!important;
+}
+
+.seven{
+  background-color:  #bcaaa4!important;
+}
+.ninetynine{
+   background-color: #cfd8dc;
+
+}
+
+.loading-indicator{
+  position: fixed;
+  z-index: 999;
+  height: 2em;
+  width: 2em;
+  overflow: show;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  
+}
+@media(max-width:600px){
+.mat-card{
+  font-size: 10px!important;
+  margin-bottom:10px;
+}
+li{
+  overflow: auto;
+}
+#sentence-content{
+  font-size: 14px!important;
+}
+
+}
+.select {
+  font-family:
+    'Roboto','Helvetica','Arial',sans-serif;
+	position: relative;
+	width: 150px;
+
+}
+.select-text {
+	position: relative;
+	font-family: inherit;
+	background-color: transparent;
+	width: 150px;
+	padding: 0px 0px 10px 0;
+	font-size: 13px;
+	border-radius: 0;
+	border: none;
+	border-bottom: 1px solid rgba(0,0,0, 0.12);
+}
+
+/* Remove focus */
+.select-text:focus {
+	outline: none;
+	border-bottom: 1px solid rgba(0,0,0, 0);
+}
+
+	/* Use custom arrow */
+.select .select-text {
+	appearance: none;
+	-webkit-appearance:none
+}
+
+.select:after {
+	position: absolute;
+	top: 18px;
+	right: 10px;
+	/* Styling the down arrow */
+	width: 0;
+	height: 0;
+	padding: 0;
+	content: '';
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-top: 6px solid rgba(0, 0, 0, 0.12);
+	pointer-events: none;
+}
+
+
+/* LABEL ======================================= */
+.select-label {
+	color: rgba(0,0,0, 0.26);
+	font-size: 10px!important;
+	font-weight: normal;
+	position: absolute;
+	pointer-events: none;
+  left: 0;
+  padding-top:0px!important;
+	transition: 0.2s ease all;
+}
+
+/* active state */
+.select-text:focus ~ .select-label, .select-text:valid ~ .select-label {
+	color: #31708e;
+	top: -20px;
+	transition: 0.2s ease all;
+	font-size: 8px;
+}
+
+/* BOTTOM BARS ================================= */
+.select-bar {
+	position: relative;
+	display: block;
+	width: 100px;
+}
+
+.select-bar:before, .select-bar:after {
+	content: '';
+	height: 2px;
+	width: 0;
+	bottom: 1px;
+	position: absolute;
+	background: #31708e;
+	transition: 0.2s ease all;
+}
+
+.select-bar:before {
+	left: 50%;
+}
+
+.select-bar:after {
+	right: 50%;
+}
+
+/* active state */
+.select-text:focus ~ .select-bar:before, .select-text:focus ~ .select-bar:after {
+	width: 50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.select-highlight {
+  position: absolute;
+  margin: 0px!important;
+	height: 40%;
+	width: 150px;
+	top: 25%;
+  left: 0;
+	pointer-events: none;
+	opacity: 0.5;
+}

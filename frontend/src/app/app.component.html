@@ -1,47 +1,45 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+<mat-sidenav-container fullscreen>
+  <mat-sidenav #sidenav mode="side" class="example-sidenav dark-theme-container" [ngStyle]="{ 'width.em': sidenavWidth }" opened="true"
+    (mouseenter)="increase()" (mouseleave)="decrease()">
+    <div style="margin:10px;padding:10px;">
+      <h6 style="font-size:18px;">Annotate</h6>
+    </div>
+    <mat-nav-list>
+      <p  mat-list-item  class="header-list"> Options </p>
+        <div style="border-bottom: 1px solid #404854;"> <a  class="items-list" mat-list-item style="margin-left:15px;"  routerLink='/about'><mat-icon style="margin-right:10px;">home</mat-icon>About</a></div>
+        <div style="border-bottom: 1px solid #404854;"><a class="items-list" mat-list-item style="margin-left:15px;"  routerLink='/categorization'><mat-icon style="margin-right:10px;">view_list</mat-icon>Categorization of a case</a></div>
+        <div style="border-bottom: 1px solid #404854;"><a class="items-list" mat-list-item  style="margin-left:15px;"  routerLink='/summarization'><mat-icon style="margin-right:10px;">list_alt</mat-icon>Summarization of a case</a></div>
+        <div style="border-bottom: 1px solid #404854;"><a class="items-list" mat-list-item style="margin-left:15px;"  routerLink='/case-category'><mat-icon style="margin-right:10px;">toc</mat-icon>Category of a case</a></div>
+    </mat-nav-list>
+  </mat-sidenav>
+  <div class="example-sidenav-content ">
+    <nav class="navbar  navbar-expand-lg navbar-light bg-light " style=" color:#F7F9FB!important;
+   background-color:#31708e!important">
+      <mat-icon style="margin-right:20px;" (click)="sidenav.toggle()" class="sidenav-menu">menu</mat-icon>
+      <a style=" color:#F7F9FB!important;" class="navbar-brand" href="#">Annotex</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+   <span class="navbar-toggler-icon"></span>
+   </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
-      </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a style="    border-bottom: 1px solid #404854;" class="nav-link" routerLink="/home" style="color:#8FC1E3">Home <span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <router-outlet></router-outlet>
   </div>
-</nav>
+</mat-sidenav-container>
+<!-- Footer -->
 
-<br/><br/>
-<button type="button" (click)="getPdf()"  class="btn btn-secondary btn-lg btn-block"> Summarize pdf </button>
-
-<button type="button" (click)="getImage()"   class="btn btn-secondary btn-lg btn-block"> Summarize image </button>
-<br/><br/>
-
-<div class="jumbotron">
-  <h3 class="display-4">Extracted Data</h3>
-  <p class="lead">{{serverData.emp[0].text}}</p>
-</div>
-
+<footer class="page-footer  " style="    padding-bottom: 10px;font-size:16px;background-color:#e0e0e0;color:grey;">
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-4" style="font-size:13px!important;">
+    AI Legal Assistant
+    <!--<a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>-->
+  </div>
+  <!-- Copyright -->
+</footer>

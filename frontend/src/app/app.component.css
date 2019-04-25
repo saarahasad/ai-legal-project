@@ -1,0 +1,51 @@
+.page-footer{
+    margin-top: 160px;
+  position: fixed;
+    height: 50px;
+    background-color: red;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
+	}
+	.pb-4, .py-4 {
+		 padding-bottom: 0rem!important;
+		 padding-top: 1rem!important;
+}
+.example-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.example-sidenav{
+  background-color: #192121;
+  color: white;
+  width: 250px!important;
+}
+
+.header-list{
+  background-color: rgba(255,255,255,.1);
+  border-bottom: 1px solid #404854;
+  color: #EEEEEE!important;
+ font-size:15px!important;
+  font-weight:700!important;
+ line-height: 50px;
+ padding-left:15px; 
+ height:50px;
+}
+.items-list{
+  
+ color: #EEEEEE!important;
+ font-weight:400!important;
+ font-size:13px!important;
+  margin-left:65x; 
+
+}
+.example-events {
+  width: 500px;
+  height: 200px;
+  overflow: auto;
+
+}

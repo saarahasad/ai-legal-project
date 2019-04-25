@@ -1,0 +1,94 @@
+<div class="container" style="height:700px;" >
+   <div class="row">
+      <div class="col-md-12"  style="justify-content: center ">
+         <div class="jumbotron" style="text-align: center; background-color:white!important">
+         <h6  style="font-variant: normal; font-size:30px;font-weight: 400; color:#31708e!important;margin-top:30px;">Annotate. </h6>
+
+          <!--        <h1 class="display-6">Hello, world!</h1>-->
+           <!-- <div class="container" style="text-align:center">
+               <img src="/../assets/image2.png" class="img-fluid" alt="Responsive image">
+            </div>-->
+            <mat-card   layout-align="center center" class="example-card" style="justify-content: center ">
+
+              <mat-tab-group  style="text-align:center;">
+               <mat-tab label="New">
+                  <br><br>
+                  <div class="container">
+                     <div class="row">
+                        <div class="col-12 " style="font-size:15px;text-align:center">
+                           <mat-form-field >
+                              <mat-label >Annotater</mat-label>
+                              <mat-select [(ngModel)]="selected_annotated">
+                              <mat-option *ngFor="let annotator of annotators" [value]="annotator.value">
+                              {{annotator.viewValue}}
+                              </mat-option>
+                              </mat-select>
+                           </mat-form-field>
+                        </div>
+                     </div>
+                        <div class="row">
+                        <div class="col-12" style="font-size:15px;text-align:center">
+                           <mat-form-field >
+                              <mat-label>New document</mat-label>
+                              <mat-select [(ngModel)]="selected_case">
+                              <mat-option *ngFor="let item of items" [value]="item">
+                              {{item.id}}.   {{item.name}}
+                              </mat-option>
+                              </mat-select>
+                           </mat-form-field>
+                        </div>
+                     </div>
+                     <div class="row" style="margin-top:20px;margin-bottom:20px">
+                        <div class="col-12" style="text-align:center">
+                           <div class="example-button-row">
+                              <!--routerLink="/annotate-case/{{selected_case}}"-->
+                              <button   (click)="onSubmit()"  mat-raised-button style="  border-radius: 25px;">  Annotate!</button>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </mat-tab>
+               <mat-tab label="Resume">
+                   <br><br>
+                  <div class="container">
+                     <div class="row">
+                        <div class="col-12" style="font-size:15px;text-align:center">
+                           <mat-form-field >
+                              <mat-label >Annotater</mat-label>
+                              <mat-select [(ngModel)]="selected_annotated_2">
+                              <mat-option *ngFor="let annotator of annotators" [value]="annotator.value">
+                              {{annotator.viewValue}}
+                              </mat-option>
+                              </mat-select>
+                           </mat-form-field>
+                        </div>
+                     </div>
+                        <div class="row">
+                        <div class="col-12" style="font-size:15px;text-align:center">
+                           <mat-form-field >
+                              <mat-label>Resume document</mat-label>
+                              <mat-select [(ngModel)]="selected_case_2">
+                              <mat-option *ngFor="let item of resumeItems" [value]="item">
+                              {{item.id}}.   {{item.name}}
+                              </mat-option>
+                              </mat-select>
+                           </mat-form-field>
+                        </div>
+                     </div>
+                     <div class="row" style="margin-top:20px;margin-bottom:20px">
+                        <div class="col-12" style="text-align:center">
+                           <div class="example-button-row" >
+                              <!--routerLink="/annotate-case/{{selected_case}}"-->
+                              <button   (click)="onSubmitResume()"  mat-raised-button style="color:white; background-color:#31708e!important; border-radius: 25px;">  Annotate!</button>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                </mat-tab>
+            </mat-tab-group>
+            </mat-card>
+         </div>
+      </div>
+   </div>
+</div>
+

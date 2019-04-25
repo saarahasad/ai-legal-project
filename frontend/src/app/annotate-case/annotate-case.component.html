@@ -1,0 +1,160 @@
+<!--
+    #E0F7FA blue
+    #FFEBEE pink
+    #E8F5E9 green
+    #FFFDE7 yellow
+    #C5CAE9 purple
+    #EF9A9A red
+    #CFD8DC grey
+
+
+--><div id="body">
+   <div id="body-outer" style="padding:0px;"class="container">
+     
+      <div class="row">
+         <div class="col-md-3" id="left-card" style="text-align:justify; margin-top:20px; margin-bottom:20px;" >
+            <mat-card id="left-card" >
+            <h6 id="left-card"  style="text-align:center;padding:10px;background-color: #cfd8dc">PRIORITY</h6>
+            <ul id="ul-content">
+                <li> 1: Highest Priority</li>
+                <li> 5: Lowest Priority</li>
+            </ul>
+             </mat-card>
+        <br>
+            <mat-card id="left-card" >
+               <h6 id="left-card"  style="text-align:center;padding:10px;background-color: #cfd8dc">CATEGORIES</h6>
+
+               <h6 id="left-card" >1. Identifying the case</h6>
+               <p >The sentences that are present in a judgment to identify the issues to be decided for a case. Courts call them as “Framing the issues”.</p>
+               <mat-divider ></mat-divider>
+               <br>
+               <h6 id="left-card" >2. Establishing facts of the case</h6>
+               <p>The facts that are relevant to the present proceedings/ litigations that stand proved, disproved or unproved for proper applications of correct legal principle/law.</p>
+               <mat-divider></mat-divider>
+                <br>
+               <h6 id="left-card"  >3. Arguing the case</h6>
+               <p>Application of legal principle/law advocated by contending parties to a given set of proved facts.</p>
+               <mat-divider></mat-divider>
+                <br>
+               <h6 id="left-card" >4. History of the case</h6>
+              <p> Chronology of events with factual details that led to the present case between parties named therein before the court on which the judgment is delivered.</p>
+               <mat-divider></mat-divider>
+                <br>
+               <h6 id="left-card"  >5. Arguments (Analysis)</h6>
+              <p> The court discussion on the law that is applicable to the set of proved facts by weighing the arguments of contending parties with reference to the statute and precedents that are available.</p>
+               <mat-divider></mat-divider>
+                <br>
+               <h6 id="left-card">6. Ratio decidendi</h6>
+              <p> Applying the correct law to a set of facts is the duty of any court. The reason given for application of any legal principle/law to decide a case is called Ratio decidendi in legal parlance. It can also be described as the central generic reference of text.</p>
+               <mat-divider></mat-divider>
+               <br>
+               <h6 id="left-card">7. Final decision</h6>
+              <p> It is an ultimate decision or conclusion of the court following as a natural or logical outcome of ratio of the decision.</p>
+            </mat-card>
+            
+         </div>
+          <div class="col-md-9" style="margin-top:20px;">
+            
+            <mat-card>
+             <h6 id="left-card"  style="text-align:center;padding:10px;background-color: #cfd8dc">Guidelines</h6>
+            <ul>
+            <li> Select a sentence's category or priority from the dropdown next to it. </li>
+            <li> A stable internet connection is essential. </li>
+            <li>Simply selecting an option would save it to the database immediately. </li>
+            <li>Selected values for category and priority of each sentence are displayed to the side of the sentence.</li>
+            <li>To change the value of category or priority for a sentence, simply reselect it from the dropdown.</li>
+            <li>If you cannot annotate the whole document in one sitting, you can return later by selecting it from the 'Resume' annotating category on the home page.</li>
+            <li>Color codes have been assigned to each category for visual assistance.</li>
+
+            </ul>
+            </mat-card>
+            <br><br>
+            <div class="container" style="padding:0px;">
+            <h6 style="font-size:18px;text-align:justify;"><strong>{{name_to_display}}</strong></h6>
+            <br>
+            <!-- <p>{{item_name.data}}</p>-->
+              <div *ngIf="sentences?.length > 0;else noItems">
+                    <ul style="padding-left:15px;"*ngFor="let sentence of sentences;let i = index;" class="collection">
+                       <li class="collection-item">
+                           <div class="container">
+                               <div class="row">
+                               <div class="col-12">
+                           <p style="padding:3px;text-align:justify; "  id="sentence-content" [ngClass]="{'zero': sentence?.category  == '0' , 'one': sentence?.category == '1' ,'two': sentence?.category == '2' ,'three': sentence?.category == '3' ,'four': sentence?.category == '4' ,'five': sentence?.category == '5','six': sentence?.category == '6','seven': sentence?.category == '7'   }">{{sentence.data}} </p>
+                            </div>
+                               </div>
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <br>  <br>
+                                <div class="select">
+                            <select  class="select-text"  #val  (change)="onChange(val.value,i)">
+                                    <option *ngFor="let cat of foods" [value]="cat.value">
+                                    {{cat.viewValue}}
+                                    </option>
+                                </select>
+                                <span class="select-highlight"></span>
+					<span class="select-bar"></span>
+					<label class="select-label">Category</label>
+                                </div>
+                              
+                            </div>
+                             <div class="col-lg-3">
+                                  <br>  <br>
+                        <div class="select">
+                           
+                            <select  class="select-text"  #val1 (change)="onChangePriority(val1.value,i)">
+                               <option value="0">Select </option>
+                                <option value="1">1 - Highest</option>
+                                <option  value="2">2 </option>
+                               <option   value="3">3</option>
+                               <option   value="4">4 </option>
+                               <option  value="5">5 - Lowest</option>
+                            </select>
+                              <span class="select-highlight"></span>
+					<span class="select-bar"></span>
+					<label class="select-label">Priority</label>
+                        </div>
+                             </div>
+                         <div class="col-lg-4">
+                              <br>
+                        <mat-card [ngClass]="{'ninetynine': sentence?.category  == '99','zero': sentence?.category  == '0' , 'one': sentence?.category == '1' ,'two': sentence?.category == '2' ,'three': sentence?.category == '3' ,'four': sentence?.category == '4' ,'five': sentence?.category == '5','six': sentence?.category == '6','seven': sentence?.category == '7'   }" id="status-update" style="padding:8px;color:white;text-align:center;">
+                              <div  *ngIf="sentence.category === '99';else zero">Category: None</div>
+                               <ng-template #zero><ng-container  *ngIf="sentence.category === '0';else one">Category: Others</ng-container></ng-template>
+                               <ng-template #one ><ng-container *ngIf="sentence.category === '1';else two">Category: Identifying the case</ng-container></ng-template>
+                               <ng-template #two ><ng-container *ngIf="sentence.category === '2';else three">Category: Establishing facts</ng-container></ng-template>
+                               <ng-template #three><ng-container  *ngIf="sentence.category === '3';else four">Category: Arguing the case</ng-container></ng-template>
+                               <ng-template #four><ng-container  *ngIf="sentence.category === '4';else five">Category: History of the case</ng-container></ng-template>
+                               <ng-template #five><ng-container  *ngIf="sentence.category === '5';else six">Category: Arguments</ng-container></ng-template>
+                               <ng-template #six><ng-container  *ngIf="sentence.category === '6';else seven">Category: Ratio Decideni</ng-container></ng-template>
+                               <ng-template #seven><ng-container  *ngIf="sentence.category === '7';else ninetynine">Category: judgment</ng-container></ng-template>
+                               <ng-template #ninetynine>Category: None</ng-template>
+
+                            </mat-card>
+                         </div>
+                         <div class="col-lg-2">
+                              <br>
+                        <mat-card id="status-update"  style="background-color:#ef9a9a;color:white;padding:8px;text-align:center; ">
+                                Priority: {{sentence.priority}}
+                            </mat-card>
+                         </div>
+                        </div>
+                           </div>
+                         </li> 
+                        <hr>
+                    </ul>
+                </div>
+
+                <ng-template class="spinner-load"  #noItems>
+                    <div class="loading-indicator">
+
+              <mat-progress-spinner [diameter]="35" class="mat-spinner-color"  [mode]="mode"></mat-progress-spinner>
+                    </div>
+                </ng-template>
+            </div>
+          </div>
+        
+       
+      </div>
+   </div>
+    <div class="container" style="height:150px;">
+</div>
+</div>
