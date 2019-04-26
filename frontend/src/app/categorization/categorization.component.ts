@@ -54,15 +54,30 @@ export class CategorizationComponent implements OnInit {
       this.sentences=sentences;
       
       this.sentences.forEach(function (element){
-         console.log(element.data);
+         if(element.category==0){
+       this.categories[0].sentences.push(element.data);
+      }
       if(element.category==1){
        this.categories[1].sentences.push(element.data);
-             console.log(element.data)
       }
       if(element.category==2){
        this.categories[2].sentences.push(element.data);
-             console.log(element.data)
       }
+      if(element.category==3){
+       this.categories[3].sentences.push(element.data);
+      } 
+       if(element.category==4){
+       this.categories[4].sentences.push(element.data);
+      }      
+       if(element.category==5){
+       this.categories[5].sentences.push(element.data);
+      } 
+       if(element.category==6){
+       this.categories[6].sentences.push(element.data);
+      } 
+       if(element.category==7){
+       this.categories[7].sentences.push(element.data);
+      } 
       }.bind(this));
     
     });

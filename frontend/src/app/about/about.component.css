@@ -1,0 +1,44 @@
+
+.curved-top-container {
+    background: linear-gradient(-18deg, rgba(164,78,141,0.7) 0%, rgba(60,0,122,0.7) 100%);
+    color: #fff;
+    position: relative;
+    display: flex;
+    height:200px;
+    flex-direction: column;
+}            
+.element {
+    background-image: url(https://www.spotdraft.com/images/bg-curve-14b93fd8.svg);
+    background-position: center top;
+    background-size: 1440px 126px;
+    background-repeat: repeat-x;
+    height: 600px;
+    padding:0px!important;
+    margin-top:-80px;
+}
+#wave {
+  position: relative;
+  height: 70px;
+  background: #e0efe3;
+}
+#wave:before {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 100% 50%;
+  height: 80px;
+  background-color: white;
+  right: -5px;
+  top: 40px;
+}
+#wave:after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 100% 50%;
+
+  height: 70px;
+  background-color: #e0efe3;
+  left: 0;
+  top: 27px;
+}
